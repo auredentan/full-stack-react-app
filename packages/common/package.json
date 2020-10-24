@@ -1,0 +1,14 @@
+{
+  "name": "@gg/common",
+  "version": "1.0.0",
+  "main": "build/index.js",
+  "typings": "build/index.d.ts",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "typescript": "^3.6.4"
+  },
+  "dependencies": {}
+}
