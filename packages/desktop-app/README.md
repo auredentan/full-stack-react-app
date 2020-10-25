@@ -1,55 +1,47 @@
-# electron-react-ts-starter 
-#### ( Has Auto Reloading and Works with Create-React-App )
+## Electron + TypeScript + React
+Boilerplate for a project using Electron, React and Typescript
 
-This is a boiler plate starter pack when starting an electron project which uses react with typescript. The code contains some bug fixes that are found when using react with electron and typescript and has auto monitoring of typescript changes to reload the electron app for faster development.
+## Installation
 
-### Why this electron-react-ts-starter :
-+ Run electron app with create-react-app without ejecting.
-+ Auto reloads the electron app when the typescript source file changes. (This is missing in a lot of tutorial articles which only have an electron.js file and not a electron.ts file )
-+ Provides the required npm scripts and folder structure for simple to complex projects.
-+ Includes a very simple bundling process.
-+ Auto reloads app for changes in both main process files and react files.
-+ With the provided folder structure , main and renderer process codebase can be maintained independently.
+Use a package manager of your choice (npm, yarn, etc.) in order to install all dependencies
 
-## Usage : 
-
-##### Run the react project from the renderer directory :
-
-```js
-cd renderer
-npm install // First time only
-npm run start
+```bash
+npm install
 ```
 
-##### Run electron app's main process from main directory :
-
-```js
-cd main
-npm install // First time only
-npm run start
+```bash
+yarn install
 ```
 
-## To Build and Bundle :
+## Usage
+In order to run this project 2 scripts will need to be executed `dev:react` and `dev:electron`, run each one in a different terminal and always run `dev:react` before `dev:electron`, or `dev` to run them in order automatically
 
-+ Just make sure that you have added all the dependencies in the `main/package.json` to the `renderer/package.json` and the run the below command from the `renderer` folder.
-
-```js
-cd renderer
-npm run release // or npm run build
+```bash
+npm run dev:react
+```
+```bash
+npm run dev:electron
 ```
 
-**Sit back and have a cup of Coffee while the app gets built**  . 
+or
 
-You will now have a full fledged application waiting for you in the `dist` folder.
+```bash
+npm run dev
+```
 
----
+## Packaging
+To generate a project package run `package`
+
+```bash
+npm run package
+```
 
 
-### Misc And Extra Options  : 
-+ If your app uses React Router , make sure you use `HashRouter` instead of `BrowserRouter` . 
-+ In the `renderer/package.json` , use the `build` property to modify the settings for electron-builder. All assets and static files in your project should be present in the `assets` folder.
-+ To get different installer types like 'msi' , 'appx' , '7z' , 'zip' etc , change the `target` property inside the `build` property in `renderer/package.json` . 
-+ If you have nested structure of typescript files in the `main` folder , make sure that you copy all the generated javascript `.js` files into the `renderer/public/`  folder before building the react app (This would add the javascript files in the public folder into the build folder when building our react-app).
 
-### Project built using this pack : 
-[Windows Terminal Tweaker](https://github.com/nateshmbhat/windows-terminal-tweaker)
+## Contributing
+
+Pull requests are always welcome 😃.
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
